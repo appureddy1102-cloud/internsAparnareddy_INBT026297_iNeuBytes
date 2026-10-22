@@ -1,0 +1,16 @@
+# Operating-system and office temporary files
+.DS_Store
+Thumbs.db
+~$*.xlsx
+~$*.docx
+.~lock*
+
+# Local credentials or private environment files
+.env
+*.pem
+*.key
+
+# Do not add build/cache folders if you later use analysis tools
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/

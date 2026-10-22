@@ -1,0 +1,5 @@
+File,Rows,Columns,Missing_Cells,Exact_Duplicate_Rows,Duplicate_Date_or_DateTime_Values,Invalid_Dates,Negative_Category_Values,Start,End,Notes
+saleshourly.csv,50532,13,0,0,0,0,0,2014-01-02T08:00:00,2019-10-08T19:00:00,Continuous hourly timestamps; daily totals reconcile within floating-point tolerance.
+salesdaily.csv,2106,13,0,0,0,0,0,2014-01-02T00:00:00,2019-10-08T00:00:00,"Continuous daily dates. Daily Hour is not time-of-day (only 190, 248, 276), so it is excluded from the clean table."
+salesweekly.csv,302,9,0,0,0,0,0,2014-01-05T00:00:00,2019-10-13T00:00:00,All 302 week-ending-Sunday totals reconcile with daily data within 0.01 per category.
+salesmonthly.csv,70,9,0,0,0,0,0,2014-01-31T00:00:00,2019-10-31T00:00:00,37 of 70 months match daily aggregation within 0.01 across all categories; derive monthly trends from daily data.

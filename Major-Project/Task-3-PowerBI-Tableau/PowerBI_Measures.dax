@@ -1,0 +1,102 @@
+// ============================================================================
+// POWER BI DAX — PHARMACEUTICAL SALES QUANTITY
+// Import pharma_sales_long.csv from Major-Project/Task-3-PowerBI-Tableau and rename the table Sales.
+// Create the Date table first, then add its calculated columns one at a time.
+// Create a relationship: Date[Date] (one side) -> Sales[Sale_Date] (many side).
+// Mark Date as the model's date table. Sales values are quantities, not revenue.
+// ============================================================================
+
+// 1) Modeling > New table
+Date =
+VAR MinDate = MIN ( 'Sales'[Sale_Date] )
+VAR MaxDate = MAX ( 'Sales'[Sale_Date] )
+RETURN
+    CALENDAR ( MinDate, MaxDate )
+
+// 2) Add these as CALCULATED COLUMNS in the Date table, one at a time.
+Year = YEAR ( 'Date'[Date] )
+
+Month Number = MONTH ( 'Date'[Date] )
+
+Month Start =
+DATE ( YEAR ( 'Date'[Date] ), MONTH ( 'Date'[Date] ), 1 )
+
+Year Month = FORMAT ( 'Date'[Date], "YYYY-MM" )
+
+Year Month Sort =
+YEAR ( 'Date'[Date] ) * 100 + MONTH ( 'Date'[Date] )
+
+Weekday Number = WEEKDAY ( 'Date'[Date], 2 )
+
+Weekday = FORMAT ( 'Date'[Date], "dddd" )
+
+// The Date table starts on 02 Jan 2014 and ends on 08 Oct 2019.
+// Therefore those two calendar months are automatically flagged FALSE.
+Is Complete Month =
+VAR CurrentMonthStart =
+    DATE ( YEAR ( 'Date'[Date] ), MONTH ( 'Date'[Date] ), 1 )
+VAR CurrentMonthEnd = EOMONTH ( 'Date'[Date], 0 )
+VAR ObservedDays =
+    COUNTROWS (
+        FILTER (
+            ALL ( 'Date' ),
+            'Date'[Date] >= CurrentMonthStart
+                && 'Date'[Date] <= CurrentMonthEnd
+        )
+    )
+RETURN
+    ObservedDays = DAY ( CurrentMonthEnd )
+
+// Sorting after creating the columns:
+// Select Month Start or Year Month as appropriate for the axis.
+// Sort Year Month by Year Month Sort; sort Weekday by Weekday Number.
+
+// ============================================================================
+// 3) Create the following as MEASURES, not calculated columns.
+// ============================================================================
+
+Total Quantity =
+SUM ( 'Sales'[Quantity] )
+
+Days in Selection =
+COUNTROWS ( VALUES ( 'Date'[Date] ) )
+
+Average Daily Quantity =
+DIVIDE ( [Total Quantity], [Days in Selection] )
+
+Peak Daily Quantity =
+MAXX ( VALUES ( 'Date'[Date] ), [Total Quantity] )
+
+Previous Month Quantity =
+CALCULATE ( [Total Quantity], PREVIOUSMONTH ( 'Date'[Date] ) )
+
+Month-over-Month Growth % =
+VAR CurrentQuantity = [Total Quantity]
+VAR PreviousQuantity = [Previous Month Quantity]
+RETURN
+    DIVIDE ( CurrentQuantity - PreviousQuantity, PreviousQuantity )
+
+Category Share % =
+DIVIDE (
+    [Total Quantity],
+    CALCULATE (
+        [Total Quantity],
+        ALL ( 'Sales'[ATC_Category], 'Sales'[Category_Description] )
+    )
+)
+
+Zero Quantity Days =
+COUNTROWS (
+    FILTER ( VALUES ( 'Date'[Date] ), [Total Quantity] = 0 )
+)
+
+// Suggested display formats:
+// Total Quantity, Average Daily Quantity, Peak Daily Quantity: 2 decimal places.
+// Category Share % and Month-over-Month Growth %: Percentage, 2 decimal places.
+// Days in Selection and Zero Quantity Days: Whole number.
+
+// Important visual setting:
+// On the monthly line chart, use Date[Month Start] on the axis and
+// [Total Quantity] as the value. Add a VISUAL-LEVEL filter:
+// Date[Is Complete Month] is TRUE. This excludes only the two partial months
+// from that chart; it does not remove valid daily data from the whole report.

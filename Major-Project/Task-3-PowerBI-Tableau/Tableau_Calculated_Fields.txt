@@ -1,0 +1,50 @@
+TABLEAU CALCULATED FIELDS — PHARMACEUTICAL SALES QUANTITY
+=========================================================
+Connect to pharma_sales_long.csv. Field names below match that file.
+Use Quantity as Number (decimal), Sale_Date and Month_Start as Date,
+and Is_Complete_Month as Boolean.
+
+1) Average Daily Quantity
+-------------------------
+SUM([Quantity]) / COUNTD([Sale_Date])
+
+Meaning: total quantity in the current filter context divided by the number of
+observed dates. Because the long file includes every date/category combination,
+including zero quantities, category filters do not remove zero-demand dates.
+
+
+2) Month-over-Month Growth % (table calculation)
+------------------------------------------------
+IF ABS(LOOKUP(SUM([Quantity]), -1)) > 0 THEN
+    (SUM([Quantity]) - LOOKUP(SUM([Quantity]), -1))
+    / ABS(LOOKUP(SUM([Quantity]), -1))
+END
+
+Use on a view with continuous Month_Start. Right-click the field and compute
+using Month_Start. Format as a percentage. Use Is_Complete_Month = True as a
+visual filter for a complete-month comparison. The first displayed month has no
+previous-month value.
+
+
+3) Optional 7-Day Moving Average (daily view only)
+--------------------------------------------------
+WINDOW_AVG(SUM([Quantity]), -6, 0)
+
+Use only with Sale_Date at daily detail and compute along Sale_Date. Do not put
+this same table calculation on a monthly chart and call it a 7-day average.
+
+
+4) Optional Complete Month Quantity
+-----------------------------------
+IF [Is_Complete_Month] THEN [Quantity] END
+
+Use SUM of this field only when you deliberately want to exclude partial-month
+days. For most project charts, keep all valid daily data and apply the complete-
+month filter only to the monthly trend worksheet.
+
+
+IMPORTANT
+- SUM([Quantity]) is total recorded sales quantity, not revenue.
+- Do not average the eight category rows and call that average total daily sales.
+- Use the supplied Month_Start field for monthly aggregation.
+- Do not treat 2019 as a complete year.

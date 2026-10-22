@@ -1,0 +1,253 @@
+PHARMACEUTICAL SALES DATA ANALYTICS
+iNeuBytes Data Analytics Internship — P1 Combined Submission Report
+
+Student: Aparna Reddy
+Registration No.: INBT026297
+Course: Data Analytics Internship
+Repository and Google Doc required name: internsAparnareddy_INBT026297_iNeuBytes
+GitHub review link: https://github.com/appureddy1102-cloud/internsAparnareddy_INBT026297_iNeuBytes
+Google Docs review link: https://docs.google.com/document/d/1amt9L8CzQ2ba_9tr_BHdGPSeUS9CUs2lT55A4ixpaKQ/edit?usp=sharing
+Dataset: Pharma sales data — Milan Zdravković, Kaggle
+Dataset source: https://www.kaggle.com/datasets/milanzdravkovic/pharma-sales-data
+
+DOCUMENT STATUS
+This document contains actual calculations from the supplied CSV files. SQL must still be executed in MySQL for application evidence. Native Excel PivotTables must be added if required. Power BI .pbix and Tableau .twbx files have not been generated. Real MySQL, Excel, Power BI and Tableau screenshots must be added before final submission. Generated analytical charts are not represented as application screenshots.
+
+EXECUTIVE SUMMARY
+This project analyses historical pharmaceutical sales quantity for eight Anatomical Therapeutic Chemical (ATC) medicine categories. The business objective is to understand category and time-based demand patterns and provide cautious evidence for inventory-planning discussions.
+
+The supplied data contains hourly, daily, weekly and monthly versions of the same underlying series. These granularities must not be added together. The main analysis uses 2,106 continuous daily records from 2 January 2014 to 8 October 2019. Hourly data is used only for hour-of-day analysis.
+
+Headline results:
+• Total recorded quantity: 127,595.50.
+• Average total quantity per observed day: 60.59.
+• Leading category: N02BE with 63,005.40 quantity, equal to 49.38% of the total.
+• Top-three categories N02BE, N05B and R03 contribute 73.09%.
+• Highest complete calendar month: January 2019 with 2,875.16.
+• Highest weekday average: Saturday with 65.67 per observed day.
+• Complete calendar months: 68.
+
+Metric warning: “sales” in this project means source-recorded quantity, not revenue. The dataset has no price, revenue, profit, current stock, supplier lead-time or expiry fields.
+
+DATASET AND DATA DICTIONARY
+Source files:
+• saleshourly.csv — 50,532 hourly rows; used for hourly patterns and reconciliation.
+• salesdaily.csv — 2,106 daily rows; canonical source for the main analysis.
+• salesweekly.csv — 302 rows; interpreted as weeks ending Sunday for reconciliation.
+• salesmonthly.csv — 70 rows; used for reconciliation rather than main monthly results.
+
+ATC category descriptions:
+• M01AB — Anti-inflammatory and antirheumatic products, non-steroids; acetic acid derivatives and related substances.
+• M01AE — Anti-inflammatory and antirheumatic products, non-steroids; propionic acid derivatives.
+• N02BA — Other analgesics and antipyretics; salicylic acid and derivatives.
+• N02BE — Other analgesics and antipyretics; pyrazolones and anilides. Kaggle describes this group as N02BE/B, while the CSV column is N02BE.
+• N05B — Psycholeptics; anxiolytic drugs.
+• N05C — Psycholeptics; hypnotics and sedatives.
+• R03 — Drugs for obstructive airway diseases.
+• R06 — Antihistamines for systemic use.
+
+Important engineered fields:
+• Sale_Date — parsed calendar date.
+• Total_Quantity — sum of all eight categories for one date.
+• Month_Start — first day of the month, used for monthly aggregation.
+• Is_Complete_Month — true only when every calendar date in the month is present.
+• ATC_Category and Quantity — long-format fields, with one row per date and category.
+
+TASK 1 — SQL-BASED DESCRIPTIVE ANALYTICS AND REPORTING
+Objective
+Inspect, clean and analyse the daily dataset using MySQL, then calculate descriptive and aggregate measures that answer business questions.
+
+Method
+1. Create a staging table with text fields so invalid source values can be inspected before conversion.
+2. Load salesdaily.csv using LOAD DATA LOCAL INFILE after changing the local path.
+3. Check blanks, duplicate dates, invalid dates, non-numeric values, negative values and calendar consistency.
+4. Create a clean daily table with DATE and DECIMAL fields and a generated Total_Quantity column.
+5. Create a long view with one row per date/category and a monthly view derived from daily data.
+6. Use SUM, AVERAGE, STDDEV_SAMP, COUNT, MIN, MAX, GROUP BY, HAVING, CASE, window functions and filtering for analysis.
+7. Use the long view for category analysis. A join is not necessary for the main calculations because category descriptions are supplied in the data dictionary/lookup; joining the lookup is optional and does not change the numerical results.
+
+Example overall query:
+SELECT
+  ROUND(SUM(total_quantity), 2) AS total_sales_quantity,
+  ROUND(AVG(total_quantity), 2) AS average_daily_quantity
+FROM pharma_sales_daily;
+
+Data-quality findings
+• No blank cells, exact duplicate rows, duplicate dates, invalid dates, negative category values or missing daily timestamps were found.
+• The daily Hour field contains only 190, 248 and 276. It is not time-of-day and was excluded from the clean analytical table.
+• Hourly totals reconcile with daily totals within floating-point tolerance.
+• All 302 weekly rows reconcile with daily aggregation when treated as weeks ending Sunday.
+• Only 37 of 70 supplied monthly rows match daily aggregation within 0.01 across all categories.
+• January 2017 demonstrates the issue: the supplied monthly total is 1.00, whereas daily aggregation gives 2,699.60. Monthly results are therefore derived from daily data using one consistent rule.
+
+Category results, ranked by total quantity:
+1. N02BE — 63,005.40; 49.38%.
+2. N05B — 18,645.74; 14.61%.
+3. R03 — 11,608.82; 9.10%.
+4. M01AB — 10,600.94; 8.31%.
+5. M01AE — 8,204.62; 6.43%.
+6. N02BA — 8,172.21; 6.40%.
+7. R06 — 6,107.82; 4.79%.
+8. N05C — 1,249.96; 0.98%.
+
+Additional results
+• Peak daily quantity: 198.95 on 30 December 2016.
+• Lowest complete month: July 2017 with 1,251.15.
+• N05C has 1,430 zero-quantity days, or 67.90% of observed days.
+• R03 has 484 zero-quantity days, or 22.98%.
+
+Business insights
+N02BE deserves close historical availability monitoring because it accounts for almost half of recorded quantity. This does not prove highest revenue or clinical importance. N05C and R03 require intermittent-demand review because simple averages hide many zero days. Partial months must not be compared directly with complete months.
+
+Task 1 learning
+SQL analysis becomes reliable only after grain, date coverage and reconciliation are understood. A query can run successfully and still produce a misleading business answer if partial periods or inconsistent source granularities are ignored.
+
+Evidence to insert before submission
+[Insert real MySQL overall query/result screenshot.]
+[Insert real MySQL category query/result screenshot.]
+[Insert real MySQL monthly query/result screenshot.]
+
+TASK 2 — EXCEL / SPREADSHEET ANALYSIS AND DASHBOARDING
+Objective
+Clean and analyse the data in Excel, use appropriate formulas, create monthly and category summaries, visualise trends and provide an interactive dashboard.
+
+Workbook and cleaning
+The workbook Pharma_Sales_Analysis.xlsx contains Raw_Daily, Clean_Daily, Long_Daily, Formula_Examples, Monthly_Summary, Category_Summary, Weekday_Summary, Data_Quality, Monthly_Reconciliation and Dashboard sheets. Source data is preserved. Cleaning converts dates, retains decimals, adds calendar fields and Total_Quantity, and flags partial months.
+
+Formula examples
+• =SUM(Clean_Daily!J2:J2107) — adds all daily total quantities.
+• =AVERAGE(Clean_Daily!J2:J2107) — calculates average total quantity per observed day.
+• =COUNTIF(Clean_Daily!G2:G2107,0) — counts zero-quantity days for N05C.
+• =SUMIFS(Clean_Daily!J2:J2107,Clean_Daily!K2:K2107,2019,Clean_Daily!L2:L2107,1) — calculates January 2019 total quantity using two conditions.
+
+PivotTables and charts
+The Long_Daily sheet is suitable for native PivotTables. For monthly analysis, use Month_Start in Rows, Sum of Quantity in Values and Is_Complete_Month = TRUE as a filter. For category analysis, use ATC_Category in Rows and Sum of Quantity in Values. Insert line and bar PivotCharts as appropriate. Native PivotTable objects must be inserted and verified in desktop Excel if strictly required; pivot-style result sheets alone are not claimed as native PivotTables.
+
+Dashboard
+The supplied dashboard includes Year and Category drop-down selectors, formula-driven KPI cards and monthly, category and weekday charts. With both selectors set to All, expected validation values are:
+• Total Quantity — 127,595.50.
+• Average Daily Quantity — 60.59.
+• Days in Selection — 2,106.
+• Overall leading category — N02BE with 49.38%.
+
+Key findings and recommendations
+• Prioritise review of N02BE availability because of its 49.38% historical quantity share.
+• Use complete-month views for monthly comparisons and retain partial-period labels.
+• Review N05C and R03 using zero-day frequency and variability, not only average demand.
+• Discuss the Saturday and January patterns with a pharmacist before changing operations.
+
+Task 2 learning
+Long-format data makes category PivotTables and slicers much easier than separate wide category columns. Average per observed day is often more meaningful than total alone when time coverage differs.
+
+Evidence to insert before submission
+[Insert real Excel dashboard screenshot with selectors visible.]
+[Insert real native PivotTable/PivotChart screenshot if required.]
+
+TASK 3 — BUSINESS INTELLIGENCE DASHBOARDS IN POWER BI OR TABLEAU
+Objective
+Prepare a reusable long-format data model, define consistent KPIs, and design an interactive dashboard with time and category filters.
+
+Data preparation
+The BI-ready file pharma_sales_long.csv contains 16,848 rows: 2,106 dates × 8 categories. Sale_Date and Month_Start are dates, Quantity is decimal, Is_Complete_Month is Boolean, and category/calendar labels are text. The file preserves zero-quantity date/category rows.
+
+Power BI measures
+• Total Quantity = SUM('Sales'[Quantity]).
+• Days in Selection = COUNTROWS(VALUES('Date'[Date])).
+• Average Daily Quantity = DIVIDE([Total Quantity], [Days in Selection]).
+• Peak Daily Quantity = MAXX(VALUES('Date'[Date]), [Total Quantity]).
+• Previous Month Quantity = CALCULATE([Total Quantity], PREVIOUSMONTH('Date'[Date])).
+• Category Share % compares each category with all categories for the same selected dates.
+
+Tableau calculated field
+Average Daily Quantity:
+SUM([Quantity]) / COUNTD([Sale_Date])
+
+Dashboard design
+• KPI cards: Total Quantity, Average Daily Quantity and Peak Daily Quantity.
+• Monthly line chart: Month Start and Total Quantity, filtered to complete months.
+• Category bar chart: ATC_Category and Total Quantity, sorted descending.
+• Weekday chart: Weekday and Average Daily Quantity, sorted Monday to Sunday.
+• Filters: Year and ATC_Category; optional Weekday.
+• Display a clear note that quantity is not revenue and that the data is historical.
+
+Business insights
+A shared long dataset and consistent metric definitions allow SQL, Excel, Power BI and Tableau to produce comparable results. The same 127,595.50 total and 49.38% N02BE share should be used as validation checks.
+
+Current status and required manual work
+A genuine .pbix or .twbx file has not been generated in this environment. Build the dashboard in Power BI Desktop or Tableau using the supplied guides and calculated measures. Validate totals, save the actual project file, reopen it and capture genuine application screenshots. Do not rename a CSV, ZIP or image to .pbix or .twbx.
+
+Task 3 learning
+Measures are filter-dependent calculations, not fixed numbers. A correct date table, data types and denominator are essential. Counting long-table rows instead of distinct dates would give an incorrect average daily quantity.
+
+Evidence to insert before submission
+[Insert real Power BI or Tableau dashboard screenshot.]
+[Insert a filtered dashboard screenshot.]
+
+MAJOR PROJECT — END-TO-END ANALYTICS CASE STUDY
+Business problem
+A pharmacy needs to understand historical demand by medicine category and time period. Historical evidence can support inventory discussions, but this dataset alone cannot produce a safe reorder quantity.
+
+Objectives
+1. Establish a documented and reproducible source of truth.
+2. Inspect and clean raw data without deleting source evidence.
+3. Calculate descriptive statistics and category/time aggregates.
+4. Visualise monthly, category, weekday and hourly patterns.
+5. Design an interactive BI dashboard with consistent KPIs.
+6. Present evidence-based recommendations with explicit limitations.
+
+Exploratory analysis
+Category: N02BE contributes 49.38%, N05B 14.61% and R03 9.10%. Together they contribute 73.09%. N05C contributes 0.98% and has the highest zero-day frequency.
+
+Monthly: January 2019 is the highest complete month at 2,875.16; July 2017 is the lowest at 1,251.15. Across complete months, January has the highest average monthly quantity and July the lowest. This is a descriptive pattern based on only five to six observations per calendar month, not a validated forecast.
+
+Annual: Complete years 2015–2018 fluctuate rather than showing a consistent upward or downward pattern. The year 2019 is partial and must not be interpreted as a full-year decline.
+
+Weekday: Saturday has the highest average at 65.67 and Thursday the lowest at 57.18. Saturday is approximately 14.85% higher, but the analysis does not establish a cause.
+
+Hourly: The highest average occurs at 19:00, with 5.38 quantity per observed hour. Overnight zero or near-zero values may reflect pharmacy operating hours rather than absent patient need.
+
+Variability: N05C has zero quantity on 67.90% of days and R03 on 22.98%. The 95th percentile and standard deviation describe historical variation but are not automatic safety-stock targets.
+
+Recommendations
+1. Begin availability review with high-share categories, especially N02BE, while retaining clinical and operational review.
+2. Use complete-month planning views and keep partial periods explicitly labelled.
+3. Treat N05C and R03 as intermittent-demand examples and include zero-day frequency, pack size and expiry in review.
+4. Confirm historical January, Saturday and evening patterns with current pharmacy evidence before changing inventory or staffing.
+5. Add current stock, stock on order, lead time, service-level target, pack size, minimum order quantity, expiry, price and supplier constraints before calculating reorder rules.
+6. Reconcile future daily, weekly and monthly extracts automatically and document corrections.
+7. Use dashboards for monitoring and discussion, not automatic purchasing.
+
+Limitations
+• Data comes from one pharmacy and may not generalise.
+• The series ends in October 2019 and does not represent current 2026 demand.
+• The final year is incomplete.
+• ATC aggregates hide brand, strength, formulation and pack differences.
+• No financial or current-inventory fields are available.
+• Kaggle states that missing-data treatment and outlier treatment were already performed.
+• Supplied monthly data does not consistently reconcile with daily data.
+• Weekday, monthly and hourly associations are descriptive, not causal.
+• No forecast, model accuracy, reorder point or purchase quantity is invented.
+• Results are not prescribing advice; pharmacist and regulatory review remain necessary.
+
+Major Project learning
+The most important technical lesson is that data preparation affects business conclusions. Reconciling time grains, preserving raw data and flagging partial periods prevents misleading comparisons. The most important business lesson is that historical quantity is only one input to inventory planning.
+
+Evidence to insert before submission
+[Insert final Major Project BI dashboard screenshot.]
+[Insert any additional final visualisations required by the mentor.]
+
+OVERALL CONCLUSION
+The project provides a reproducible pharmaceutical quantity-analysis workflow covering data quality, SQL, Excel and BI dashboard design. N02BE is the dominant historical quantity category, complete-month analysis reveals substantial time variation, and intermittent-demand categories require more than a simple average. Reliable inventory action requires current operational data and authorised pharmacy judgement.
+
+SUBMISSION COMPLIANCE CHECK
+• Use one public GitHub repository named internsAparnareddy_INBT026297_iNeuBytes.
+• Commit actual files into Task-1, Task-2 and Major-Project folders; do not upload a ZIP as the submission.
+• Use this single Google Doc for detailed explanations, screenshots, results and learnings from all tasks and the Major Project.
+• Test both review links in an incognito window before submission.
+• Do not share the Google Doc or GitHub review links on social media.
+• Submit only real, tested review links through the P1 portal and monitor email for the verification meeting.
+
+REFERENCES
+1. Milan Zdravković, Pharma sales data, Kaggle: https://www.kaggle.com/datasets/milanzdravkovic/pharma-sales-data
+2. Dataset licence listed by Kaggle: Creative Commons Attribution-NonCommercial 4.0 International — https://creativecommons.org/licenses/by-nc/4.0/
+3. iNeuBytes P1 instructions supplied by the student. Current official portal and mentor instructions take priority.

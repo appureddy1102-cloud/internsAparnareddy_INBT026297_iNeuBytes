@@ -1,0 +1,9 @@
+Rank_by_Total_Quantity,ATC_Category,Category_Description,Total_Quantity,Share_of_Total_Percent,Average_Daily_Quantity,Median_Daily_Quantity,StdDev_Daily_Quantity,Coefficient_of_Variation,P95_Daily_Quantity,Maximum_Daily_Quantity,Zero_Quantity_Days,Zero_Day_Percent
+1,N02BE,Other analgesics and antipyretics — pyrazolones and anilides,63005.402708,49.379015,29.917095,26.900000,15.590966,0.521139,59.937500,161.000000,26,1.234568
+2,N05B,Psycholeptics — anxiolytic drugs,18645.737500,14.613162,8.853627,8.000000,5.605605,0.633142,19.000000,54.833333,43,2.041785
+3,R03,Drugs for obstructive airway diseases,11608.822917,9.098144,5.512262,4.000000,6.428736,1.166261,20.000000,45.000000,484,22.981956
+4,M01AB,"Anti-inflammatory and antirheumatic products, non-steroids — acetic acid derivatives and related substances",10600.937083,8.308237,5.033683,4.990000,2.737579,0.543852,10.000000,17.340000,40,1.899335
+5,M01AE,"Anti-inflammatory and antirheumatic products, non-steroids — propionic acid derivatives",8204.618646,6.430179,3.895830,3.670000,2.133337,0.547595,7.660000,14.463000,36,1.709402
+6,N02BA,Other analgesics and antipyretics — salicylic acid and derivatives,8172.209000,6.404778,3.880441,3.500000,2.384010,0.614366,8.000000,16.000000,78,3.703704
+7,R06,Antihistamines for systemic use,6107.817500,4.786860,2.900198,2.000000,2.415816,0.832983,8.000000,15.000000,256,12.155745
+8,N05C,Psycholeptics — hypnotics and sedatives,1249.958333,0.979626,0.593522,0.000000,1.092988,1.841528,3.000000,9.000000,1430,67.901235
