@@ -11,7 +11,7 @@ Dataset: Pharma sales data — Milan Zdravković, Kaggle
 Dataset source: https://www.kaggle.com/datasets/milanzdravkovic/pharma-sales-data
 
 DOCUMENT STATUS
-This document contains actual calculations from the supplied CSV files. SQL must still be executed in MySQL for application evidence. Native Excel PivotTables must be added if required. Power BI .pbix and Tableau .twbx files have not been generated. Real MySQL, Excel, Power BI and Tableau screenshots must be added before final submission. Generated analytical charts are not represented as application screenshots.
+This document contains actual calculations from the supplied CSV files. A Tableau Public dashboard link and Tableau's own preview image have been added. SQL must still be executed in MySQL for application evidence, and native Excel PivotTables must be added if required. A local packaged .twbx has not been generated; save/download one if required. Remaining MySQL, Excel and filtered dashboard screenshots must be added before final submission. Generated analytical charts are not represented as application screenshots.
 
 EXECUTIVE SUMMARY
 This project analyses historical pharmaceutical sales quantity for eight Anatomical Therapeutic Chemical (ATC) medicine categories. The business objective is to understand category and time-based demand patterns and provide cautious evidence for inventory-planning discussions.
@@ -174,13 +174,15 @@ Business insights
 A shared long dataset and consistent metric definitions allow SQL, Excel, Power BI and Tableau to produce comparable results. The same 127,595.50 total and 49.38% N02BE share should be used as validation checks.
 
 Current status and required manual work
-A genuine .pbix or .twbx file has not been generated in this environment. Build the dashboard in Power BI Desktop or Tableau using the supplied guides and calculated measures. Validate totals, save the actual project file, reopen it and capture genuine application screenshots. Do not rename a CSV, ZIP or image to .pbix or .twbx.
+A Tableau Public dashboard has been published by the student:
+https://public.tableau.com/app/profile/tallapureddy.reddy/viz/Pharma_Sales_Dashboard_/PharmaSalesDashboard?publish=yes
+Tableau Public page and static preview were accessible when checked on 23 October 2026. Tableau's preview is saved in Major-Project/Screenshots/Tableau_Pharma_Sales_Dashboard.png. This hosted dashboard is not a local packaged .twbx file. Open the live dashboard to validate filtering, save/download a genuine .twbx if required, and check the monthly axis: the preview currently displays Year of Month Start, so use continuous Month if a monthly trend is required.
 
 Task 3 learning
 Measures are filter-dependent calculations, not fixed numbers. A correct date table, data types and denominator are essential. Counting long-table rows instead of distinct dates would give an incorrect average daily quantity.
 
 Evidence to insert before submission
-[Insert real Power BI or Tableau dashboard screenshot.]
+[Tableau Public dashboard preview inserted in the Google Doc; PNG saved in Major-Project/Screenshots/.]
 [Insert a filtered dashboard screenshot.]
 
 MAJOR PROJECT — END-TO-END ANALYTICS CASE STUDY

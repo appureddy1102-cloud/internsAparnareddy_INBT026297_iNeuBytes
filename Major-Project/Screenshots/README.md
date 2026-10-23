@@ -2,7 +2,7 @@
 
 ## Current status
 
-No genuine MySQL, Excel, Power BI or Tableau application screenshots have been supplied. They remain pending.
+A genuine Tableau Public dashboard preview has been saved as `Tableau_Pharma_Sales_Dashboard.png` from the student's published Tableau page. The live dashboard URL is documented in `Major-Project/Task-3-PowerBI-Tableau/Tableau_Dashboard_Link.md`. Interactive filtering and any remaining application screenshots still need to be checked/captured.
 
 Analytical PNG charts are available in `Major-Project/Charts/`. They are calculated from the supplied CSVs, but they are **not application screenshots** and must not be labelled as MySQL, Excel, Power BI or Tableau evidence.
 
@@ -24,8 +24,9 @@ Analytical PNG charts are available in `Major-Project/Charts/`. They are calcula
 
 ### Task 3 / Major Project — Power BI or Tableau
 
-- [ ] Full dashboard with KPI cards, charts and filters visible.
-- [ ] Dashboard with a filter applied.
+- [x] Save Tableau Public's dashboard preview image.
+- [ ] Check the full live dashboard with KPI cards, charts and filters visible.
+- [ ] Capture and save a dashboard view with a filter applied.
 
 ## Good screenshot practice
 

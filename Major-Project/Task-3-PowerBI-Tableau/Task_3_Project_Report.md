@@ -77,18 +77,25 @@ If the average is calculated using long-table row count rather than distinct dat
 - Year/category filters allow users to investigate whether broad patterns hold in subsets.
 - Consistent measures allow SQL, Excel and BI outputs to be reconciled.
 
-## 7. Current file status and manual steps
+## 7. Published Tableau dashboard and remaining steps
 
-A genuine `.pbix` or `.twbx` has **not** been generated in this environment. The folder contains data, DAX, Tableau calculations and build guides—not a substitute application file.
+A Tableau Public dashboard has been created by the student:
+
+https://public.tableau.com/app/profile/tallapureddy.reddy/viz/Pharma_Sales_Dashboard_/PharmaSalesDashboard?publish=yes
+
+Tableau's own preview image is saved at `Major-Project/Screenshots/Tableau_Pharma_Sales_Dashboard.png`. The public page and preview were accessible when checked. See `Tableau_Dashboard_Link.md` for the evidence note.
+
+A local `.pbix` or `.twbx` has not been generated in this environment. The hosted Tableau dashboard is genuine, but it must not be described as a packaged workbook.
 
 Before P1 submission:
 
-- [ ] Build the dashboard in Power BI Desktop or Tableau.
-- [ ] Validate all unfiltered and filtered results.
-- [ ] Save a genuine `Pharma_Sales_Dashboard.pbix` or `Pharma_Sales_Dashboard.twbx` here.
-- [ ] Reopen the saved file to verify it functions.
-- [ ] Capture actual dashboard and filtered-view screenshots.
-- [ ] Add screenshots to the combined Google Doc.
+- [x] Create a Tableau Public dashboard and save its live URL.
+- [x] Save Tableau's dashboard preview image.
+- [ ] Open the live dashboard and validate unfiltered and filtered results.
+- [ ] Check the monthly axis; the preview currently displays Year of Month Start, so use continuous Month if a monthly trend is required.
+- [ ] Save/download a genuine `Pharma_Sales_Dashboard.twbx` if required by the mentor.
+- [ ] Capture any remaining filtered-view screenshots.
+- [ ] Add the final evidence to the combined Google Doc.
 
 ## 8. Learning
 

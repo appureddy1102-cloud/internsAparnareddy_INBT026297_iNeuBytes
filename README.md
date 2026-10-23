@@ -8,7 +8,9 @@
 **Google Docs combined report:** https://docs.google.com/document/d/1amt9L8CzQ2ba_9tr_BHdGPSeUS9CUs2lT55A4ixpaKQ/edit?usp=sharing  
 **GitHub repository:** https://github.com/appureddy1102-cloud/internsAparnareddy_INBT026297_iNeuBytes
 
-> **Completion status:** This repository contains real data, code, calculations, an Excel workbook, BI build assets and reports. MySQL execution screenshots, native Excel PivotTables if required, genuine Power BI/Tableau project files and application screenshots remain manual steps. Do not describe those pending items as completed in the P1 portal.
+**Tableau Public dashboard:** https://public.tableau.com/app/profile/tallapureddy.reddy/viz/Pharma_Sales_Dashboard_/PharmaSalesDashboard?publish=yes
+
+> **Completion status:** This repository contains real data, code, calculations, an Excel workbook, BI build assets and reports. A Tableau Public dashboard link and Tableau's own preview image have been added. MySQL execution screenshots, native Excel PivotTables if required, a local packaged `.twbx` if required, and any remaining application/filtered screenshots remain manual steps. Do not describe pending items as completed in the P1 portal.
 
 ## 1. Project objective
 

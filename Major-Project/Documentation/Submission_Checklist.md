@@ -4,10 +4,13 @@
 **Registration No.:** INBT026297  
 **Verified on:** 22 October 2026
 
+**Tableau update:** 23 October 2026
+
 ## Verified review links
 
 - **GitHub:** https://github.com/appureddy1102-cloud/internsAparnareddy_INBT026297_iNeuBytes
 - **Google Doc:** https://docs.google.com/document/d/1amt9L8CzQ2ba_9tr_BHdGPSeUS9CUs2lT55A4ixpaKQ/edit?usp=sharing
+- **Tableau Public dashboard:** https://public.tableau.com/app/profile/tallapureddy.reddy/viz/Pharma_Sales_Dashboard_/PharmaSalesDashboard?publish=yes
 
 ## Completed and verified
 
@@ -24,6 +27,8 @@
 - [x] Unauthenticated Google Docs export returned HTTP 200 and the correct report content.
 - [x] Raw data, clean data, SQL, Excel workbook, calculated results, BI assets and reports are included.
 - [x] Pending application-specific work is explicitly identified rather than fabricated.
+- [x] Tableau Public dashboard URL supplied and its public page/preview checked.
+- [x] Tableau's dashboard preview saved under `Major-Project/Screenshots/`.
 
 ## Still required before final P1 submission
 
@@ -43,11 +48,13 @@
 
 ### Task 3 / Major Project — BI
 
-- [ ] Build the dashboard in Power BI Desktop or Tableau using the supplied files.
-- [ ] Save a genuine `.pbix` or `.twbx`; do not rename another file type.
-- [ ] Reopen and validate the saved dashboard.
-- [ ] Capture actual normal and filtered dashboard screenshots.
-- [ ] Add the dashboard file and screenshots to the repository and Google Doc.
+- [x] Create a Tableau Public dashboard and save its live URL.
+- [x] Save Tableau's dashboard preview image.
+- [ ] Open the live dashboard and validate unfiltered and filtered results.
+- [ ] Check the monthly axis; use continuous Month if a monthly trend is required.
+- [ ] Save/download a genuine `.twbx` if required by the mentor; do not rename another file type.
+- [ ] Capture any remaining filtered dashboard screenshots.
+- [ ] Add final evidence to the repository and Google Doc.
 
 ### Final review and portal
 
