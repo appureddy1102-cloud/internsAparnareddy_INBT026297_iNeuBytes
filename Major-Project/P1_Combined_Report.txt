@@ -11,7 +11,7 @@ Dataset: Pharma sales data — Milan Zdravković, Kaggle
 Dataset source: https://www.kaggle.com/datasets/milanzdravkovic/pharma-sales-data
 
 DOCUMENT STATUS
-This document contains actual calculations from the supplied CSV files. The final corrected self-contained SQL, a genuine Power BI PBIX, Tableau Public evidence and student-supplied MySQL, Excel, Power BI and Tableau screenshots are included in the repository. PNG integrity and PBIX structure were checked; application interactivity was not independently tested here. Final Excel recalculation/category-chart checks, native PivotTables if required, final-layout filtered captures and continuous-month/filter review remain documented. No .twbx or native PivotTable objects are claimed.
+This document contains actual calculations from the supplied CSV files. The final corrected self-contained SQL, a genuine Power BI PBIX, Tableau Public evidence and student-supplied MySQL, Excel, Power BI and Tableau screenshots are included in the repository. The single Google Doc includes an Application Evidence tab with 11 selected screenshots and the public PBIX link. PNG integrity and PBIX structure were checked; application interactivity was not independently tested here. Final Excel recalculation/category-chart checks, native PivotTables if required, final-layout filtered captures and continuous-month/filter review remain documented. No .twbx or native PivotTable objects are claimed.
 
 EXECUTIVE SUMMARY
 This project analyses historical pharmaceutical sales quantity for eight Anatomical Therapeutic Chemical (ATC) medicine categories. The business objective is to understand category and time-based demand patterns and provide cautious evidence for inventory-planning discussions.

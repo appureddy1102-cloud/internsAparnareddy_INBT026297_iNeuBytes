@@ -6,6 +6,8 @@
 
 This register distinguishes student-supplied application evidence from independent validation. The screenshots below are genuine application captures supplied by the student; they are not generated analytical charts.
 
+The single Google Doc contains a dedicated `Application Evidence` tab with 11 selected screenshots, the public PBIX download link and the Tableau Public link.
+
 ## Task 1 — MySQL 8.0
 
 The older path/privilege-dependent SQL was replaced with the final self-contained corrected `Task-1/pharma_sales_analysis.sql`. It embeds all 2,106 daily records, uses the currently selected schema, avoids the reserved `rows` alias and includes the `ONLY_FULL_GROUP_BY`-compatible annual query.

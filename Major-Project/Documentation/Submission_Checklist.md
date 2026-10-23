@@ -30,8 +30,9 @@
 
 ### Evidence integration
 
-- [ ] Add the selected application screenshots and public PBIX download link to the single Google Doc.
-- [ ] Commit and push the final documentation updates; confirm a clean working tree and matching remote commit.
+- [x] Add the selected application screenshots and public PBIX download link to the single Google Doc.
+- [x] Create an `Application Evidence` tab with 11 selected screenshots and rename the main tab `Combined Report`.
+- [x] Verify that the Google Doc contains no remaining `[Insert ...]` evidence placeholders.
 
 ### Task 2 — Excel
 

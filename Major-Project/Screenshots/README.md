@@ -1,6 +1,6 @@
 # Application Screenshot Evidence
 
-Student-supplied application screenshots are organised by task. These are genuine captures received on 23 October 2026, not generated analytical PNGs.
+Student-supplied application screenshots are organised by task. These are genuine captures received on 23 October 2026, not generated analytical PNGs. Eleven selected images and the public PBIX link are also included in the Google Doc's `Application Evidence` tab.
 
 ## Task 1 — SQL
 
