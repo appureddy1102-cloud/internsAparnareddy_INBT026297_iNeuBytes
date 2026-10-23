@@ -15,7 +15,7 @@
 - [x] One public GitHub repository created with the exact required name and the three-folder root layout.
 - [x] Actual project files committed individually; no ZIP file uploaded as the submission.
 - [x] One public Google Doc created with the exact required title and Task 1, Task 2, Task 3 and Major Project content.
-- [x] Public anyone-with-link reader permission enabled without search discovery.
+- [x] Anyone-with-link Reader permission verified without search discovery; changed from Writer to Reader on 23 October 2026 while retaining public visibility.
 - [x] Final corrected self-contained SQL replaced the older path/privilege-dependent script.
 - [x] Student-supplied MySQL 8.0 evidence shows a successful 29-query execution, 2,106 loaded rows and expected headline results.
 - [x] Five SQL execution/result screenshots added under `Major-Project/Screenshots/Task-1-SQL/`.
@@ -25,6 +25,8 @@
 - [x] Power BI and Tableau application screenshots added under `Major-Project/Screenshots/`.
 - [x] Tableau Public dashboard URL and static preview added.
 - [x] Validation scope and remaining visible issues documented in `Application_Evidence_Register.md`.
+- [x] Excel `Dashboard_Data` monthly/category source ranges and chart definitions repaired programmatically; clean/long totals preserved.
+- [x] `Final_Project_Report.docx` and supporting reports synchronised with the current files and evidence.
 
 ## Remaining final checks
 
@@ -33,24 +35,33 @@
 - [x] Add the selected application screenshots and public PBIX download link to the single Google Doc.
 - [x] Create an `Application Evidence` tab with 11 selected screenshots and rename the main tab `Combined Report`.
 - [x] Verify that the Google Doc contains no remaining `[Insert ...]` evidence placeholders.
+- [x] Correct the Google Doc SQL method, repair/status notes and evidence captions; keep five orphaned captions with their images and make review/source links clickable.
+- [x] Anonymous PDF/TXT/HTML exports succeeded after the Google Doc edits; the PDF contains 19 pages and all 12 images.
 
 ### Task 2 — Excel
 
-- [ ] Recalculate the final workbook in desktop Excel and test the Year/Category selectors.
-- [ ] Verify the category-comparison chart; it appears blank in the supplied lower-dashboard capture.
+- [ ] Recalculate, save, close and reopen the repaired workbook in desktop Excel; test the Year/Category selectors.
+- [ ] Replace the pre-repair Excel dashboard/lower-chart captures and add a genuine filtered dashboard capture.
 - [ ] Insert native PivotTables if required by the official instructions.
 
-### Task 3 / Major Project — BI
+### Task 3 / Major Project — Power BI
 
-- [ ] Reopen the final PBIX in Power BI Desktop and test final-layout filtering.
-- [ ] Capture a filtered screenshot of the final Power BI layout; the supplied filtered capture is from an earlier development layout.
-- [ ] Change trend axes to continuous Month where a monthly trend is required; some supplied Power BI captures show Year and the Tableau capture shows Year of Month Start.
+- [ ] In the PBIX, change monthly trends to continuous Month with complete-month filtering; sort weekdays Monday–Sunday.
+- [ ] Remove the unnecessary Weekday series/tooltip from the main category chart, clear saved N02BA/N02BE selections, correct measure/card/page names and review Details-page granularity.
+- [ ] Save, close, reopen and test all four PBIX pages and their filter interactions.
+- [ ] Replace `PowerBI_01_Dashboard_Summary.png` and `PowerBI_02_Sales_Analysis.png`; add `PowerBI_04_Filtered_Final_View.png` from the corrected four-page layout.
+
+### Task 3 / Major Project — Tableau
+
+- [ ] Change the trend to continuous Month with complete-month filtering; show/test Year and ATC filters on all intended worksheets.
+- [ ] Sort weekdays Monday–Sunday, format the total to two decimals and correct cropping/layout; republish and retest the public dashboard.
+- [ ] Replace `Tableau_01_Dashboard_Desktop.png`, `Tableau_03_Weekday_Demand.png` and `Tableau_Pharma_Sales_Dashboard.png`; add `Tableau_04_Dashboard_Filtered.png`.
 - [ ] Save/download a genuine `.twbx` only if required by the mentor.
 - [ ] Independent interactive testing is not claimed by the assistant.
 
 ### Final review and portal
 
-- [ ] Test the GitHub and Google Doc review links again in an incognito window.
+- [ ] Test the GitHub, Google Doc and Tableau Public review links again in an incognito window.
 - [ ] Confirm the current official P1 deadline and mentor instructions in the portal.
 - [ ] Submit only the two review links through the P1 portal.
 - [ ] Submit carefully because each submission/resubmission uses a chance.

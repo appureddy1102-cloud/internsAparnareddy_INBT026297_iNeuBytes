@@ -11,7 +11,7 @@ Dataset: Pharma sales data — Milan Zdravković, Kaggle
 Dataset source: https://www.kaggle.com/datasets/milanzdravkovic/pharma-sales-data
 
 DOCUMENT STATUS
-This document contains actual calculations from the supplied CSV files. The final corrected self-contained SQL, a genuine Power BI PBIX, Tableau Public evidence and student-supplied MySQL, Excel, Power BI and Tableau screenshots are included in the repository. The single Google Doc includes an Application Evidence tab with 11 selected screenshots and the public PBIX link. PNG integrity and PBIX structure were checked; application interactivity was not independently tested here. Final Excel recalculation/category-chart checks, native PivotTables if required, final-layout filtered captures and continuous-month/filter review remain documented. No .twbx or native PivotTable objects are claimed.
+This document contains actual calculations from the supplied CSV files. The final corrected self-contained SQL, a genuine Power BI PBIX, Tableau Public evidence and student-supplied MySQL, Excel, Power BI and Tableau screenshots are included in the repository. The single Google Doc includes an Application Evidence tab with 11 selected screenshots and the public PBIX link. On 23 October 2026, the Excel Dashboard_Data monthly/category source ranges and chart definitions were repaired programmatically; the underlying clean/long totals were preserved. Desktop Excel recalculation, reopening, selector testing and replacement of the pre-repair dashboard screenshots remain. Power BI Desktop corrections/reopening, Tableau corrections/republication and final-layout captures also remain. Native PivotTables and a local .twbx are required only if specified by the official instructions; neither is claimed.
 
 EXECUTIVE SUMMARY
 This project analyses historical pharmaceutical sales quantity for eight Anatomical Therapeutic Chemical (ATC) medicine categories. The business objective is to understand category and time-based demand patterns and provide cautious evidence for inventory-planning discussions.
@@ -59,7 +59,7 @@ Inspect, clean and analyse the daily dataset using MySQL, then calculate descrip
 
 Method
 1. Create a staging table with text fields so invalid source values can be inspected before conversion.
-2. Load salesdaily.csv using LOAD DATA LOCAL INFILE after changing the local path.
+2. Run the self-contained embedded INSERT statements. No CSV path, LOAD DATA, CREATE DATABASE or USE is required; select an allowed existing schema first.
 3. Check blanks, duplicate dates, invalid dates, non-numeric values, negative values and calendar consistency.
 4. Create a clean daily table with DATE and DECIMAL fields and a generated Total_Quantity column.
 5. Create a long view with one row per date/category and a monthly view derived from daily data.
@@ -138,7 +138,7 @@ Task 2 learning
 Long-format data makes category PivotTables and slicers much easier than separate wide category columns. Average per observed day is often more meaningful than total alone when time coverage differs.
 
 Application evidence
-Four student-supplied Excel screenshots are stored in Major-Project/Screenshots/Task-2-Excel/. Final recalculation and the blank category-comparison chart in the supplied lower-dashboard capture require checking. Native PivotTable evidence remains required only if specified by the mentor.
+Four student-supplied Excel screenshots are stored in Major-Project/Screenshots/Task-2-Excel/. The dashboard captures predate the programmatic Dashboard_Data/chart repair and must not be represented as post-repair evidence. Recalculate and reopen the repaired workbook in desktop Excel, test both selectors, and replace the dashboard captures. Native PivotTable evidence remains required only if specified by the mentor.
 
 TASK 3 — BUSINESS INTELLIGENCE DASHBOARDS IN POWER BI OR TABLEAU
 Objective
@@ -171,10 +171,10 @@ Business insights
 A shared long dataset and consistent metric definitions allow SQL, Excel, Power BI and Tableau to produce comparable results. The same 127,595.50 total and 49.38% N02BE share should be used as validation checks.
 
 Current status and verification boundary
-A genuine Pharma_Sales_Dashboard.pbix was retrieved from the student's Google Drive and added to Major-Project/Task-3-PowerBI-Tableau/. ZIP integrity passed and the package contains a data model and four report pages; it was not reopened in this environment. Power BI screenshots are in Major-Project/Screenshots/Task-3-PowerBI/.
+A genuine Pharma_Sales_Dashboard.pbix was retrieved from the student's Google Drive and added to Major-Project/Task-3-PowerBI-Tableau/. ZIP integrity passed and the package contains a data model and four report pages; it was not reopened in this environment. Report-definition inspection found Year-level monthly trends, no complete-month report filter, saved N02BA/N02BE slicer selections, weekday sorting and label issues that require Power BI Desktop correction. Power BI screenshots are in Major-Project/Screenshots/Task-3-PowerBI/; the Sales Analysis capture shows an earlier two-page state and must be recaptured from the final four-page file.
 A Tableau Public dashboard has also been published:
 https://public.tableau.com/app/profile/tallapureddy.reddy/viz/Pharma_Sales_Dashboard_/PharmaSalesDashboard?publish=yes
-Tableau Public and Desktop/Public captures are included. The supplied Tableau trend still displays Year of Month Start, and some Power BI trend captures display Year; use continuous Month where a monthly trend is required. Final-layout filter testing and a .twbx if required remain documented checks.
+Tableau Public and Desktop/Public captures are included. The supplied Tableau trend displays Year of Month Start; use continuous Month with complete-month filtering. Show and test Year/ATC filters, sort weekdays Monday–Sunday, format the total to two decimals and correct the dashboard layout before republication. Final-layout filter testing and a .twbx if required remain documented checks.
 
 Task 3 learning
 Measures are filter-dependent calculations, not fixed numbers. A correct date table, data types and denominator are essential. Counting long-table rows instead of distinct dates would give an incorrect average daily quantity.

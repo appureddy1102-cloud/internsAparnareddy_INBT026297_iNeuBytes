@@ -33,3 +33,10 @@ Validated against the supplied workspace files on 22 October 2026.
 - The workbook was not opened/recalculated in desktop Microsoft Excel here; the student must visually inspect and test it there.
 - Native Excel PivotTable objects, Power BI and Tableau files require their respective applications.
 - Generated PNGs were visually checked as analytical charts, not represented as application screenshots.
+
+## 23 October 2026 completion update
+
+- `Task-2/Pharma_Sales_Analysis.xlsx`: restored `Dashboard_Data!A2:B9` to the first eight monthly rows, moved the existing category formulas/values to `E2:F9`, retained weekday data in `H2:J8`, and repaired chart caches/references. SHA-256 after repair: `2e998e4f7279378de161470fdbc00b42c8e3a1939ed04bf592d40dc1e0125e5e`.
+- Workbook validation after repair: valid ZIP; 13 sheets; three dashboard charts; two selectors; 70 monthly date categories; eight text category/value pairs; clean and long totals still reconcile to 127,595.50368748402 within floating-point tolerance. Native PivotTable objects remain absent.
+- `Major-Project/Final_Project_Report.docx`: obsolete SQL path, folder structure and completion-status statements were updated. Five embedded images and 23 tables were preserved.
+- These are programmatic file/structure checks, not desktop Excel, Power BI Desktop or Tableau interactive validation. Replacement application screenshots remain necessary where noted in the evidence register.

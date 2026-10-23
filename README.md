@@ -2,15 +2,14 @@
 
 ## iNeuBytes Data Analytics Internship — P1
 
-**Student:** Aparna Reddy  
-**Registration No.:** INBT026297  
-**Project:** Pharmaceutical Sales Data Analytics  
-**Google Docs combined report:** https://docs.google.com/document/d/1amt9L8CzQ2ba_9tr_BHdGPSeUS9CUs2lT55A4ixpaKQ/edit?usp=sharing  
+**Student:** Aparna Reddy
+**Registration No.:** INBT026297
+**Project:** Pharmaceutical Sales Data Analytics
+**Google Docs combined report:** https://docs.google.com/document/d/1amt9L8CzQ2ba_9tr_BHdGPSeUS9CUs2lT55A4ixpaKQ/edit?usp=sharing
 **GitHub repository:** https://github.com/appureddy1102-cloud/internsAparnareddy_INBT026297_iNeuBytes
-
 **Tableau Public dashboard:** https://public.tableau.com/app/profile/tallapureddy.reddy/viz/Pharma_Sales_Dashboard_/PharmaSalesDashboard?publish=yes
 
-> **Completion status:** The repository now contains the final corrected self-contained SQL, a genuine Power BI PBIX, Tableau Public evidence, and student-supplied MySQL, Excel, Power BI and Tableau screenshots. PNG integrity and PBIX structure were checked. Final Excel recalculation/category-chart checks, native PivotTables if required, final-layout filtered captures and continuous-month/filter review remain documented in `Major-Project/Documentation/Application_Evidence_Register.md`. No `.twbx` or native PivotTable objects are claimed.
+> **Current status after programmatic corrections — 23 October 2026:** The repository contains the self-contained corrected SQL, reconciled source/cleaned/result data, a genuine Power BI PBIX, Tableau Public evidence and student-supplied application screenshots. The Excel `Dashboard_Data` monthly/category source ranges and chart definitions have been repaired, and the underlying clean/long totals were preserved. `Final_Project_Report.docx` and the supporting reports have been synchronised. The Google Doc is publicly readable with Anyone-with-link Reader access. Desktop Excel recalculation/selector testing and replacement of pre-repair Excel screenshots remain. Power BI Desktop corrections/reopening, Tableau corrections/republication and final application screenshots also remain. No `.twbx` or native Excel PivotTable objects are claimed, and portal submission is not claimed.
 
 ## 1. Project objective
 
@@ -20,7 +19,7 @@ The source has no price, revenue, profit, current-stock, supplier-lead-time or e
 
 ## 2. Dataset
 
-**Pharma sales data — Milan Zdravković, Kaggle**  
+**Pharma sales data — Milan Zdravković, Kaggle**
 https://www.kaggle.com/datasets/milanzdravkovic/pharma-sales-data
 
 The main analysis uses **2,106 daily records from 2 January 2014 to 8 October 2019**. Raw source files are preserved under `Major-Project/Source_Data/`; the Task 1 daily dataset and data dictionary are under `Task-1/Dataset/`.
@@ -60,8 +59,8 @@ internsAparnareddy_INBT026297_iNeuBytes/
 ## 4. Tools
 
 - **MySQL 8.0:** staging, data-quality checks, clean tables/views and analytical SQL.
-- **Microsoft Excel:** formulas, summaries, PivotTable practice, charts and dashboard selectors.
-- **Power BI Desktop or Tableau:** long-format data model, calculated measures and interactive dashboard.
+- **Microsoft Excel:** formulas, summaries, charts and dashboard selectors; native PivotTables only if required by the official instructions.
+- **Power BI Desktop and Tableau Public:** long-format data model, calculated measures and interactive dashboard evidence.
 - **Google Docs:** one combined P1 report.
 - **GitHub:** one public, folder-organised review repository.
 
@@ -86,7 +85,7 @@ The daily file has continuous dates and reconciles with hourly and weekly files.
 
 January 2014 and October 2019 are partial months. They remain labelled and are excluded from complete-month rankings. The year 2019 is not presented as a complete year.
 
-## 7. Execution instructions
+## 7. Execution and final-validation instructions
 
 ### Task 1 — SQL
 
@@ -98,27 +97,49 @@ January 2014 and October 2019 are partial months. They remain labelled and are e
 
 ### Task 2 — Excel
 
-1. Open `Task-2/Pharma_Sales_Analysis.xlsx` in desktop Excel.
-2. Read `START_HERE`, recalculate formulas and test the Year/Category dashboard selectors.
-3. With both selectors at All, confirm Total Quantity = **127,595.50**, Average Daily = **60.59**, and Days = **2,106**.
-4. Follow `Excel_Step_by_Step.md` to add native PivotTables if required.
-5. Save and capture actual Excel dashboard/PivotTable screenshots.
+1. Open the repaired `Task-2/Pharma_Sales_Analysis.xlsx` in desktop Excel.
+2. The programmatic repair has already been applied: monthly data is in `Dashboard_Data!A2:C71`, category data in `E2:F9`, weekday data in `H2:J8`, and the chart references/caches were corrected. Do not move category values back into `A2:B9`.
+3. Fully recalculate with **Ctrl+Alt+F9**, save, close and reopen. Confirm there are no `#N/A` values in the intended output ranges and no blank chart areas.
+4. With both selectors at `All`, confirm Total Quantity = **127,595.50**, Average Daily = **60.59**, Days = **2,106**, and N02BE share = **49.38%**. Test at least one Year and one Category selection and confirm that the intended visuals respond.
+5. Follow `Excel_Step_by_Step.md` to add native PivotTables only if required by the official instructions.
+6. Replace the pre-repair `Excel_02_Dashboard_Overview.png` and `Excel_03_Dashboard_Charts.png` with genuine post-repair captures. Add `Excel_05_Dashboard_Filtered.png` after a deliberate filter test. Keep the valid Start Here and formula-example captures.
 
-### Task 3 and Major Project — BI
+### Task 3 and Major Project — Power BI
 
-1. The genuine Power BI file is `Major-Project/Task-3-PowerBI-Tableau/Pharma_Sales_Dashboard.pbix`.
-2. The Tableau Public URL and evidence note are in `Major-Project/Task-3-PowerBI-Tableau/Tableau_Dashboard_Link.md`.
-3. Reopen the PBIX in Power BI Desktop and test the final report pages, filters and headline totals.
-4. Review the Tableau dashboard and use continuous Month rather than Year if a monthly trend is required.
-5. See `Major-Project/Screenshots/` and `Major-Project/Documentation/Application_Evidence_Register.md` for the supplied evidence and validation boundary.
+1. Open `Major-Project/Task-3-PowerBI-Tableau/Pharma_Sales_Dashboard.pbix` in Power BI Desktop.
+2. On every relevant page, use a continuous Month axis for a monthly trend and apply `Is_Complete_Month = True` to that trend. The current report definitions use Year and contain no complete-month report filter.
+3. Sort weekday charts Monday–Sunday using `Weekday_Number`.
+4. On the main category chart, remove the unnecessary `Weekday_Name` series and `Weekday_Number` tooltip.
+5. Clear saved N02BA and N02BE slicer selections before capturing unfiltered evidence. Test a deliberate filter separately.
+6. Rename `Total Quality Total Quantity` to `Total Quantity`; correct `Total quality` and `peak daily qunatity`; format the total card to show **127,595.50**, not only **127.60K**. Clean page names by removing leading spaces and trailing full stops.
+7. Review the Details page: use a genuine daily axis for a chart titled “Daily,” or rename the visual to match its actual granularity.
+8. Save, close, reopen and test all four pages. Recapture the Summary and Sales Analysis pages from the final four-page PBIX and add a filtered screenshot of the final layout.
 
-## 8. Remaining manual steps before P1 submission
+### Task 3 and Major Project — Tableau
 
-- [ ] Recalculate the final Excel workbook, verify the category-comparison chart and add native PivotTables if required.
-- [ ] Reopen the final PBIX, test filters and capture a filtered screenshot of the final layout.
-- [ ] Review the Tableau/Power BI trend axes and use continuous Month where a monthly trend is required.
-- [ ] Save/download a `.twbx` only if required by the mentor.
-- [ ] Test the GitHub and Google Docs links in an incognito window.
+1. Open the published workbook in Tableau and change the trend to continuous `Month_Start` with `Is_Complete_Month = True`.
+2. Show Year and ATC Category filters and apply them to all intended worksheets. Remove the unnecessary single-value Quantity range control if it does not serve the analysis.
+3. Sort weekdays Monday–Sunday, format the total to two decimals, and resize the dashboard so every KPI and all eight categories are visible without cropping.
+4. Test filters, republish and confirm the public link in a private browser window.
+5. Replace the dashboard and static-preview evidence. Save/download a genuine `.twbx` only if required by the mentor.
+
+### Final report and evidence documents
+
+1. `Major-Project/Final_Project_Report.docx` was synchronised on 23 October 2026: the current SQL path/method, three-folder structure, PBIX/Tableau/evidence status and public-link status are now stated. Its five charts and 23 tables were preserved.
+2. The combined report, Task 2/Task 3 reports, screenshot guide, evidence register and validation summary were updated with the programmatic repair and remaining manual checks.
+3. After the final Excel, Power BI and Tableau application work, refresh these status documents again and insert only genuine post-correction screenshots. Keep earlier captures explicitly labelled as pre-repair or development evidence.
+
+## 8. Remaining steps before P1 submission
+
+- [ ] Recalculate, save, close and reopen the repaired Excel workbook; test All/All and filtered selections.
+- [ ] Replace the pre-repair Excel dashboard screenshots and add a genuine filtered dashboard capture.
+- [ ] Add native PivotTables/PivotCharts and evidence only if required by the official instructions.
+- [ ] Correct, reopen and filter-test the PBIX; replace the Summary/Sales Analysis captures and add a filtered final-layout capture.
+- [ ] Correct and republish the Tableau dashboard; test Year/ATC filters and replace/add final evidence.
+- [ ] Save/download a genuine `.twbx` only if required by the mentor.
+- [ ] Update the Google Doc with the final genuine screenshots and refresh the evidence register/checklists after the manual tests.
+- [ ] Keep the Google Doc at Anyone-with-link **Reader** access and test GitHub, Google Doc and Tableau Public links in an incognito/private window.
+- [ ] Confirm the current official P1 instructions, deadline and remaining submission chances in the portal.
 - [ ] Submit only the two review links through the official P1 portal.
 
 ## 9. Submission rules from the supplied instructions
@@ -126,7 +147,7 @@ January 2014 and October 2019 are partial months. They remain labelled and are e
 - Use this **one public repository** for all work; do not create separate task repositories.
 - Commit actual files into the correct folders. **Do not upload a ZIP file as the GitHub submission.**
 - Use the single linked Google Doc for explanations, screenshots, results and learnings from all tasks and the Major Project.
-- Keep both review links publicly accessible, but do not share them on social media.
+- Keep both review links publicly accessible with appropriate read-only review access, but do not share them on social media.
 - Submit carefully: each submission or resubmission uses a chance.
 - Monitor email, including spam/promotions, for the mandatory P1 verification meeting.
 - Follow the current official portal and mentor instructions if they differ from this general guide.

@@ -81,15 +81,15 @@ If the average is calculated using long-table row count rather than distinct dat
 
 ### Power BI
 
-A genuine student-created `Pharma_Sales_Dashboard.pbix` is included in this folder. Its ZIP integrity passed, and the package contains a data model, report definitions and four report pages. It was structurally checked but not reopened in this environment.
+A genuine student-created `Pharma_Sales_Dashboard.pbix` is included in this folder. Its ZIP integrity passed, and the package contains a data model, report definitions and four report pages. It was structurally checked but not reopened in this environment. Report-definition inspection found Year-level monthly trends, no complete-month report filter, weekday charts sorted by value, a Weekday series/tooltip on the main category chart, saved N02BA/N02BE selections, and label/page-name issues. These are pending Power BI Desktop corrections.
 
 Selected screenshots are under `Major-Project/Screenshots/Task-3-PowerBI/`:
 
-- `PowerBI_01_Dashboard_Summary.png` — final Summary page with KPI and category evidence.
-- `PowerBI_02_Sales_Analysis.png` — category, weekday and trend analysis.
+- `PowerBI_01_Dashboard_Summary.png` — Summary page 4 of 4 with KPI and category evidence; labels and KPI formatting require correction.
+- `PowerBI_02_Sales_Analysis.png` — earlier two-page category, weekday and Year-trend capture; recapture from the final four-page PBIX.
 - `PowerBI_03_Filtered_Development_View.png` — earlier filtered development capture, not represented as the final layout.
 
-Final PBIX reopen/filter testing and a filtered capture of the final layout are recommended. Some trend captures display Year rather than continuous Month.
+Apply the documented PBIX corrections in Power BI Desktop, save, close, reopen and test all four pages. Replace the Summary and Sales Analysis captures and add a filtered capture of the final layout. Desktop interactivity is not independently claimed.
 
 ### Tableau
 
@@ -97,7 +97,7 @@ The student's Tableau Public dashboard is:
 
 https://public.tableau.com/app/profile/tallapureddy.reddy/viz/Pharma_Sales_Dashboard_/PharmaSalesDashboard?publish=yes
 
-Tableau's static preview and three Desktop/Public application captures are included under `Major-Project/Screenshots/`. The dashboard still displays Year of Month Start in the supplied capture; use continuous Month if a monthly trend is required. A local `.twbx` and independent interactive-filter validation are not claimed.
+Tableau's static preview and three Desktop/Public application captures are included under `Major-Project/Screenshots/`. The dashboard displays Year of Month Start; use continuous Month with complete-month filtering. Also show/test Year and ATC filters, sort weekdays Monday–Sunday, format the total to two decimals and correct the layout before republication. Replace the final captures after testing. A local `.twbx` and independent interactive-filter validation are not claimed.
 
 See `Major-Project/Documentation/Application_Evidence_Register.md` for the complete evidence scope.
 

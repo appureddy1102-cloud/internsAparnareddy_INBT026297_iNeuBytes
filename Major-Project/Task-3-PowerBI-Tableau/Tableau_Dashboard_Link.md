@@ -18,6 +18,8 @@ This is a hosted Tableau Public dashboard. It is **not** a local `.twbx` file. I
 
 - Open the live link in a browser and test the dashboard and filters.
 - Check Total Quantity, Average Daily Quantity and category results against the project validation values.
-- The saved preview's monthly axis displays **Year of Month Start**. If a monthly trend is required, change the axis to continuous Month and republish.
-- Capture a filtered dashboard view if required.
+- The saved preview's monthly axis displays **Year of Month Start**. Change it to continuous Month and apply `Is_Complete_Month = True` to the monthly trend.
+- Show Year and ATC Category filters, apply them to all intended worksheets and test a deliberate selection.
+- Sort weekdays Monday–Sunday, format the total to two decimals and resize the dashboard so every KPI and all eight categories are visible without cropping.
+- Republish, retest the public link, replace the static preview/dashboard captures and capture a filtered final view.
 - Keep the live link and this note with the Task 3 evidence.

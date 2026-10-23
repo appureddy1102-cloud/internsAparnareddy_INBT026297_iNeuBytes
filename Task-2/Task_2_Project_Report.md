@@ -61,6 +61,8 @@ The Dashboard sheet provides:
 - Monthly complete-month trend.
 - Category comparison and weekday pattern charts.
 
+On 23 October 2026, the `Dashboard_Data` monthly/category source ranges and chart definitions were repaired programmatically. The monthly source again contains all 70 months, and the category chart has eight populated category/value pairs. Underlying clean/long totals were preserved. These structural repairs still require desktop Excel recalculation and selector testing.
+
 Unfiltered validation values:
 
 | Check | Expected |
@@ -87,9 +89,10 @@ Unfiltered validation values:
 ## 8. Application evidence and remaining checks
 
 - [x] Student supplied Excel Start Here, dashboard, lower-chart and formula-example screenshots.
-- [x] Four selected screenshots are stored under `Major-Project/Screenshots/Task-2-Excel/`.
+- [x] Four selected screenshots are stored in `Major-Project/Screenshots/Task-2-Excel/`.
 - [x] Visible KPI evidence includes Total Quantity 127,595.50, Average Daily Quantity 60.59, Days 2,106 and N02BE share 49.38%.
-- [ ] Recalculate the final workbook in desktop Excel and verify the category-comparison chart; it appears blank in the supplied lower-dashboard capture.
+- [x] The `Dashboard_Data` monthly/category source ranges and chart definitions were repaired programmatically; clean/long totals were preserved.
+- [ ] Recalculate, save, close and reopen the repaired workbook in desktop Excel; test both selectors and replace the pre-repair dashboard screenshots.
 - [ ] Add native PivotTables if required by the official instructions.
 
 The assistant did not independently recalculate the workbook in desktop Excel.

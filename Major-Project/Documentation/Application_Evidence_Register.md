@@ -27,13 +27,13 @@ The screenshots are evidence of the student's SQLTest MySQL 8.0 execution. The a
 | Evidence | What it shows |
 |---|---|
 | `Task-2-Excel/Excel_01_Start_Here.png` | Workbook guide, source scope and headline metrics |
-| `Task-2-Excel/Excel_02_Dashboard_Overview.png` | Excel dashboard, selectors, KPI cards and monthly/weekday visuals |
-| `Task-2-Excel/Excel_03_Dashboard_Charts.png` | Lower dashboard charts as supplied |
+| `Task-2-Excel/Excel_02_Dashboard_Overview.png` | Pre-repair Excel dashboard, selectors, KPI cards and monthly/weekday visuals |
+| `Task-2-Excel/Excel_03_Dashboard_Charts.png` | Pre-repair lower dashboard charts; category area is blank |
 | `Task-2-Excel/Excel_04_Formula_Examples.png` | Practical SUM, AVERAGE, COUNT, COUNTIF and SUMIFS examples |
 
 Visible validation includes Total Quantity 127,595.50, Average Daily Quantity 60.59, Days 2,106 and N02BE share 49.38%.
 
-Remaining checks: the supplied lower-dashboard capture shows the category-comparison chart area blank, and a Protected View banner is visible. Final desktop recalculation, category-chart verification and native PivotTables if required are not independently confirmed.
+Repair update: on 23 October 2026, the workbook’s `Dashboard_Data` monthly/category source ranges and chart definitions were repaired programmatically. All 70 monthly dates were restored, the category chart now has eight text/value pairs, and clean/long totals were preserved. The existing dashboard captures predate this repair. Desktop recalculation, save/close/reopen, selector testing and replacement dashboard captures remain. Native PivotTables if required are not independently confirmed.
 
 ## Task 3 — Power BI
 
@@ -48,11 +48,11 @@ The genuine project file is `Major-Project/Task-3-PowerBI-Tableau/Pharma_Sales_D
 
 | Evidence | What it shows |
 |---|---|
-| `Task-3-PowerBI/PowerBI_01_Dashboard_Summary.png` | Summary page with Total Quantity 127.60K, Average Daily Quantity 60.59, Peak Daily Quantity 198.95, category chart and Year slicer |
-| `Task-3-PowerBI/PowerBI_02_Sales_Analysis.png` | Category, weekday and trend analysis page |
+| `Task-3-PowerBI/PowerBI_01_Dashboard_Summary.png` | Summary page 4 of 4 with Total Quantity 127.60K, Average Daily Quantity 60.59, Peak Daily Quantity 198.95, category chart and Year slicer; labels/formatting need correction |
+| `Task-3-PowerBI/PowerBI_02_Sales_Analysis.png` | Earlier two-page Sales Analysis capture with Year trend and value-sorted weekdays; current PBIX has four pages |
 | `Task-3-PowerBI/PowerBI_03_Filtered_Development_View.png` | Earlier development capture with N02BA selected; retained as filtered development evidence, not represented as the final report layout |
 
-Final PBIX reopen/filter testing and a filtered screenshot of the final layout are recommended. Some supplied trend captures display Year rather than a continuous monthly axis.
+Report-definition inspection found Year-level monthly trends, no complete-month report filter, weekday charts sorted by value, a Weekday series/tooltip on the main category chart, saved N02BA/N02BE slicer selections, and measure/card/page-name issues. Correct these in Power BI Desktop, then save, close, reopen and test all four pages. Replace the Summary and Sales Analysis captures and add a filtered screenshot of the final layout. Desktop interactivity is not independently claimed.
 
 ## Task 3 — Tableau
 
@@ -65,7 +65,7 @@ The live Tableau Public URL is documented in `Task-3-PowerBI-Tableau/Tableau_Das
 | `Task-3-Tableau/Tableau_02_Category_Sales.png` | Category Sales worksheet and quantity total |
 | `Task-3-Tableau/Tableau_03_Weekday_Demand.png` | Weekday Demand worksheet and Sunday tooltip |
 
-The Tableau preview/dashboard capture still displays `Year of Month Start`; use continuous Month if a monthly trend is required. A local `.twbx` and independent interactive-filter validation are not claimed.
+The Tableau preview/dashboard capture displays `Year of Month Start`; use continuous Month with complete-month filtering. The supplied dashboard also needs visible Year/ATC filters, Monday–Sunday ordering, two-decimal KPI formatting and a clean uncropped layout. Republish and test the public dashboard, then replace the dashboard/weekday/static-preview captures and add a filtered final view. A local `.twbx` and independent interactive-filter validation are not claimed.
 
 ## Evidence selection
 

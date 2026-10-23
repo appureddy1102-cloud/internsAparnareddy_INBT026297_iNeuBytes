@@ -15,6 +15,8 @@ The workbook already contains:
 
 **Important limitation:** the workbook includes pivot-style result tables, but not native Excel PivotTable objects. If your mentor requires actual PivotTables, complete Section 5 below. Also capture your own real Excel dashboard screenshot after checking the workbook.
 
+**23 October 2026 repair update:** the `Dashboard_Data` monthly table in `A2:C71`, category table in `E2:F9`, weekday table in `H2:J8` and chart definitions were repaired programmatically. The first eight monthly rows that had been overwritten by category labels were restored, and the category chart now uses text categories with eight populated values. Raw, clean, long and summary data were not changed. The existing dashboard screenshots predate this repair. Desktop recalculation, reopening, selector testing and replacement screenshots remain necessary.
+
 ## 1. Learn the meaning of the columns
 
 - `Sale_Date`: the calendar date.
@@ -135,6 +137,8 @@ Use these sheets as evidence for your data-cleaning discussion. In particular, t
 **Why use `Long_Daily`?** In the wide table, each category is a separate column. In the long table, category is a field, so PivotTables and slicers can compare categories naturally.
 
 ## 6. Use the interactive dashboard
+
+The source-range and chart-definition repair has already been applied. Do not move the category data back into `A2:B9`; the intended ranges are monthly `A2:C71`, category `E2:F9` and weekday `H2:J8`.
 
 1. Open `Dashboard`.
 2. Change the yellow **Year** cell to `All` or a year from 2014–2019.

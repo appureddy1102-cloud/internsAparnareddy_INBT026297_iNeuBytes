@@ -71,4 +71,4 @@ No reorder quantity, safety-stock level or purchase recommendation is invented f
 - Power BI and Tableau build definitions: `Major-Project/Task-3-PowerBI-Tableau/`.
 - Charts: `Major-Project/Charts/`.
 
-The SQL script and BI projects must be run/rebuilt in their respective applications for application-specific execution evidence and screenshots.
+Student-supplied MySQL execution evidence and genuine Power BI/Tableau evidence are included. Final desktop Excel recalculation and selector testing, Power BI Desktop corrections/reopening, and Tableau corrections/republication remain application-specific manual steps. Do not represent generated analytical previews as application screenshots.
