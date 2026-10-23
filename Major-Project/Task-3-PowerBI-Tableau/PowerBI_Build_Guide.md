@@ -1,10 +1,12 @@
 # Power BI Build Guide — `Pharma_Sales_Dashboard.pbix`
 
-## Honest file status
+## Project file status
 
-A real `.pbix` file must be created and saved in Power BI Desktop. It has **not** been generated in this package, and a CSV or renamed file must never be presented as one. Use this guide with the supplied BI-ready data and DAX.
+A genuine student-created `Pharma_Sales_Dashboard.pbix` is now included in this folder. It was retrieved from the student's Google Drive and passed ZIP/package-integrity checks. It contains a data model, report definitions and four report pages, but it was not reopened or interactively tested in this environment.
 
-Power BI Desktop normally requires Windows. If you do not have it, use an approved college/lab computer or ask your mentor what alternative evidence is accepted.
+Use the remaining guide when you need to rebuild or modify the report with the supplied BI-ready data and DAX. A CSV or renamed file must never be presented as a PBIX.
+
+Power BI Desktop normally requires Windows. Final reopen, recalculation and filter testing should be performed in Power BI Desktop.
 
 ## 1. Open a new project
 

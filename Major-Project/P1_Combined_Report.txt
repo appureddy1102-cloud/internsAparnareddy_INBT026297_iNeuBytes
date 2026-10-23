@@ -11,7 +11,7 @@ Dataset: Pharma sales data — Milan Zdravković, Kaggle
 Dataset source: https://www.kaggle.com/datasets/milanzdravkovic/pharma-sales-data
 
 DOCUMENT STATUS
-This document contains actual calculations from the supplied CSV files. A Tableau Public dashboard link and Tableau's own preview image have been added. SQL must still be executed in MySQL for application evidence, and native Excel PivotTables must be added if required. A local packaged .twbx has not been generated; save/download one if required. Remaining MySQL, Excel and filtered dashboard screenshots must be added before final submission. Generated analytical charts are not represented as application screenshots.
+This document contains actual calculations from the supplied CSV files. The final corrected self-contained SQL, a genuine Power BI PBIX, Tableau Public evidence and student-supplied MySQL, Excel, Power BI and Tableau screenshots are included in the repository. PNG integrity and PBIX structure were checked; application interactivity was not independently tested here. Final Excel recalculation/category-chart checks, native PivotTables if required, final-layout filtered captures and continuous-month/filter review remain documented. No .twbx or native PivotTable objects are claimed.
 
 EXECUTIVE SUMMARY
 This project analyses historical pharmaceutical sales quantity for eight Anatomical Therapeutic Chemical (ATC) medicine categories. The business objective is to understand category and time-based demand patterns and provide cautious evidence for inventory-planning discussions.
@@ -102,10 +102,8 @@ N02BE deserves close historical availability monitoring because it accounts for 
 Task 1 learning
 SQL analysis becomes reliable only after grain, date coverage and reconciliation are understood. A query can run successfully and still produce a misleading business answer if partial periods or inconsistent source granularities are ignored.
 
-Evidence to insert before submission
-[Insert real MySQL overall query/result screenshot.]
-[Insert real MySQL category query/result screenshot.]
-[Insert real MySQL monthly query/result screenshot.]
+Application evidence
+Five student-supplied MySQL 8.0 execution/result screenshots are stored in Major-Project/Screenshots/Task-1-SQL/. They include data quality, overall/category/monthly, month-over-month and annual/weekday/peak results. The older SQL was replaced with the final corrected self-contained script.
 
 TASK 2 — EXCEL / SPREADSHEET ANALYSIS AND DASHBOARDING
 Objective
@@ -139,9 +137,8 @@ Key findings and recommendations
 Task 2 learning
 Long-format data makes category PivotTables and slicers much easier than separate wide category columns. Average per observed day is often more meaningful than total alone when time coverage differs.
 
-Evidence to insert before submission
-[Insert real Excel dashboard screenshot with selectors visible.]
-[Insert real native PivotTable/PivotChart screenshot if required.]
+Application evidence
+Four student-supplied Excel screenshots are stored in Major-Project/Screenshots/Task-2-Excel/. Final recalculation and the blank category-comparison chart in the supplied lower-dashboard capture require checking. Native PivotTable evidence remains required only if specified by the mentor.
 
 TASK 3 — BUSINESS INTELLIGENCE DASHBOARDS IN POWER BI OR TABLEAU
 Objective
@@ -173,17 +170,17 @@ Dashboard design
 Business insights
 A shared long dataset and consistent metric definitions allow SQL, Excel, Power BI and Tableau to produce comparable results. The same 127,595.50 total and 49.38% N02BE share should be used as validation checks.
 
-Current status and required manual work
-A Tableau Public dashboard has been published by the student:
+Current status and verification boundary
+A genuine Pharma_Sales_Dashboard.pbix was retrieved from the student's Google Drive and added to Major-Project/Task-3-PowerBI-Tableau/. ZIP integrity passed and the package contains a data model and four report pages; it was not reopened in this environment. Power BI screenshots are in Major-Project/Screenshots/Task-3-PowerBI/.
+A Tableau Public dashboard has also been published:
 https://public.tableau.com/app/profile/tallapureddy.reddy/viz/Pharma_Sales_Dashboard_/PharmaSalesDashboard?publish=yes
-Tableau Public page and static preview were accessible when checked on 23 October 2026. Tableau's preview is saved in Major-Project/Screenshots/Tableau_Pharma_Sales_Dashboard.png. This hosted dashboard is not a local packaged .twbx file. Open the live dashboard to validate filtering, save/download a genuine .twbx if required, and check the monthly axis: the preview currently displays Year of Month Start, so use continuous Month if a monthly trend is required.
+Tableau Public and Desktop/Public captures are included. The supplied Tableau trend still displays Year of Month Start, and some Power BI trend captures display Year; use continuous Month where a monthly trend is required. Final-layout filter testing and a .twbx if required remain documented checks.
 
 Task 3 learning
 Measures are filter-dependent calculations, not fixed numbers. A correct date table, data types and denominator are essential. Counting long-table rows instead of distinct dates would give an incorrect average daily quantity.
 
-Evidence to insert before submission
-[Tableau Public dashboard preview inserted in the Google Doc; PNG saved in Major-Project/Screenshots/.]
-[Insert a filtered dashboard screenshot.]
+Application evidence
+Power BI screenshots are in Major-Project/Screenshots/Task-3-PowerBI/. Tableau screenshots are in Major-Project/Screenshots/Task-3-Tableau/, and Tableau Public's static preview is in Major-Project/Screenshots/Tableau_Pharma_Sales_Dashboard.png. An earlier Power BI filtered development capture is labelled as such and is not represented as the final layout.
 
 MAJOR PROJECT — END-TO-END ANALYTICS CASE STUDY
 Business problem
@@ -234,9 +231,8 @@ Limitations
 Major Project learning
 The most important technical lesson is that data preparation affects business conclusions. Reconciling time grains, preserving raw data and flagging partial periods prevents misleading comparisons. The most important business lesson is that historical quantity is only one input to inventory planning.
 
-Evidence to insert before submission
-[Insert final Major Project BI dashboard screenshot.]
-[Insert any additional final visualisations required by the mentor.]
+Application evidence
+Use Major-Project/Screenshots/Task-3-PowerBI/PowerBI_01_Dashboard_Summary.png and Major-Project/Screenshots/Task-3-Tableau/Tableau_01_Dashboard_Desktop.png as the primary Major Project BI application evidence. See Major-Project/Documentation/Application_Evidence_Register.md for exact validation scope and remaining checks.
 
 OVERALL CONCLUSION
 The project provides a reproducible pharmaceutical quantity-analysis workflow covering data quality, SQL, Excel and BI dashboard design. N02BE is the dominant historical quantity category, complete-month analysis reveals substantial time variation, and intermittent-demand categories require more than a simple average. Reliable inventory action requires current operational data and authorised pharmacy judgement.

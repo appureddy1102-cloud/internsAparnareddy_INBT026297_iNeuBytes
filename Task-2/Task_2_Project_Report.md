@@ -84,12 +84,15 @@ Unfiltered validation values:
 3. Include variability and zero-day frequency in category reviews.
 4. Confirm historical calendar patterns with current pharmacy evidence before operational changes.
 
-## 8. Remaining evidence
+## 8. Application evidence and remaining checks
 
-- [ ] Open in desktop Excel and recalculate/validate the workbook.
+- [x] Student supplied Excel Start Here, dashboard, lower-chart and formula-example screenshots.
+- [x] Four selected screenshots are stored under `Major-Project/Screenshots/Task-2-Excel/`.
+- [x] Visible KPI evidence includes Total Quantity 127,595.50, Average Daily Quantity 60.59, Days 2,106 and N02BE share 49.38%.
+- [ ] Recalculate the final workbook in desktop Excel and verify the category-comparison chart; it appears blank in the supplied lower-dashboard capture.
 - [ ] Add native PivotTables if required by the official instructions.
-- [ ] Capture real Excel dashboard and PivotTable screenshots.
-- [ ] Insert actual screenshots into the combined Google Doc.
+
+The assistant did not independently recalculate the workbook in desktop Excel.
 
 ## 9. Learning
 

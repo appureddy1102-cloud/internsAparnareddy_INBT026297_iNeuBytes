@@ -76,14 +76,16 @@ Category totals and shares:
 - Calculated results: `query_results/`.
 - Additional insights: `Business_Insights.md`.
 
-Change the SQL CSV path and run it in MySQL 8.0. The result CSVs were calculated from the supplied data using equivalent logic; they are not claimed as MySQL execution screenshots.
+The final SQL is self-contained: select an allowed existing schema and run it in MySQL 8.0; no CSV path or LOAD DATA is required. It embeds all 2,106 source rows and includes the permission, reserved-alias and ONLY_FULL_GROUP_BY corrections. The result CSVs were calculated from the supplied data using equivalent logic and are used as reconciliation tables.
 
-## 8. Remaining evidence
+## 8. Application evidence
 
-- [ ] Execute the script successfully in MySQL.
-- [ ] Compare actual MySQL results with the calculated tables.
-- [ ] Capture real query/result screenshots.
-- [ ] Add the screenshots to the combined Google Doc before P1 submission.
+- [x] Student executed the corrected script in an online MySQL 8.0 environment; the supplied capture shows a successful 29-query execution message.
+- [x] Result captures show 2,106 loaded rows, Total Quantity 127,595.50, Average Daily Quantity 60.59, Peak Daily Quantity 198.95 and category/monthly/annual/weekday outputs.
+- [x] Five selected SQL screenshots are stored under `Major-Project/Screenshots/Task-1-SQL/`.
+- [x] The older SQL was replaced by the final corrected self-contained script.
+
+The assistant reviewed the supplied result captures but did not independently rerun the script in a local MySQL server.
 
 ## 9. Learning
 

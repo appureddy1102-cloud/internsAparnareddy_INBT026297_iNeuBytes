@@ -5,7 +5,7 @@
 - The supplied `salesdaily.csv` was inspected and calculated with the same logic used in `pharma_sales_analysis.sql`.
 - Result tables are supplied in `query_results/`.
 - The SQL file contains MySQL 8.0 staging, quality checks, a clean table, analytical views, and business queries.
-- **You must still run the SQL in MySQL and capture the real MySQL result-grid screenshots.** The CSV result files are not screenshots and are not claimed as a MySQL execution log.
+- The final corrected self-contained SQL has replaced the older script. Student-supplied MySQL 8.0 execution/result screenshots are stored under `Major-Project/Screenshots/Task-1-SQL/`; the CSV result files remain reconciliation tables, not screenshots.
 
 ## Verified calculations from the supplied CSV
 

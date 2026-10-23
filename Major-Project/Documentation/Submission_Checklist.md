@@ -1,10 +1,8 @@
 # P1 Submission and Verification Checklist
 
-**Student:** Aparna Reddy  
-**Registration No.:** INBT026297  
-**Verified on:** 22 October 2026
-
-**Tableau update:** 23 October 2026
+**Student:** Aparna Reddy
+**Registration No.:** INBT026297
+**Evidence update:** 23 October 2026
 
 ## Verified review links
 
@@ -14,54 +12,44 @@
 
 ## Completed and verified
 
-- [x] One public GitHub repository created with the exact required name.
-- [x] Actual project files committed individually; no ZIP file uploaded.
-- [x] Remote root contains `Task-1`, `Task-2`, `Major-Project` and `README.md`.
-- [x] Task 3 BI assets are organised inside `Major-Project/Task-3-PowerBI-Tableau/` to preserve the portal's three-folder root layout.
-- [x] Public GitHub visibility verified through the GitHub API.
-- [x] Public raw README returned HTTP 200 and the correct student/project content.
-- [x] One Google Doc created with the exact required title.
-- [x] Google Doc contains Task 1, Task 2, Task 3 and Major Project explanations, results and learnings.
-- [x] Google Doc contains the actual GitHub review link.
+- [x] One public GitHub repository created with the exact required name and the three-folder root layout.
+- [x] Actual project files committed individually; no ZIP file uploaded as the submission.
+- [x] One public Google Doc created with the exact required title and Task 1, Task 2, Task 3 and Major Project content.
 - [x] Public anyone-with-link reader permission enabled without search discovery.
-- [x] Unauthenticated Google Docs export returned HTTP 200 and the correct report content.
-- [x] Raw data, clean data, SQL, Excel workbook, calculated results, BI assets and reports are included.
-- [x] Pending application-specific work is explicitly identified rather than fabricated.
-- [x] Tableau Public dashboard URL supplied and its public page/preview checked.
-- [x] Tableau's dashboard preview saved under `Major-Project/Screenshots/`.
+- [x] Final corrected self-contained SQL replaced the older path/privilege-dependent script.
+- [x] Student-supplied MySQL 8.0 evidence shows a successful 29-query execution, 2,106 loaded rows and expected headline results.
+- [x] Five SQL execution/result screenshots added under `Major-Project/Screenshots/Task-1-SQL/`.
+- [x] Four Excel application screenshots added under `Major-Project/Screenshots/Task-2-Excel/`.
+- [x] Genuine `Pharma_Sales_Dashboard.pbix` retrieved from the student's Google Drive and added with a clean single extension.
+- [x] PBIX ZIP integrity passed; data model, report definitions and four pages are present.
+- [x] Power BI and Tableau application screenshots added under `Major-Project/Screenshots/`.
+- [x] Tableau Public dashboard URL and static preview added.
+- [x] Validation scope and remaining visible issues documented in `Application_Evidence_Register.md`.
 
-## Still required before final P1 submission
+## Remaining final checks
 
-### Task 1 — MySQL
+### Evidence integration
 
-- [ ] Run `Task-1/pharma_sales_analysis.sql` successfully in MySQL 8.0.
-- [ ] Compare actual MySQL results with the supplied calculated result tables.
-- [ ] Capture real SQL query/result screenshots.
-- [ ] Add screenshots to `Major-Project/Screenshots/` and the single Google Doc.
+- [ ] Add the selected application screenshots and public PBIX download link to the single Google Doc.
+- [ ] Commit and push the final documentation updates; confirm a clean working tree and matching remote commit.
 
 ### Task 2 — Excel
 
-- [ ] Open `Task-2/Pharma_Sales_Analysis.xlsx` in desktop Excel and recalculate.
-- [ ] Test all formulas, charts and Year/Category selectors.
+- [ ] Recalculate the final workbook in desktop Excel and test the Year/Category selectors.
+- [ ] Verify the category-comparison chart; it appears blank in the supplied lower-dashboard capture.
 - [ ] Insert native PivotTables if required by the official instructions.
-- [ ] Capture real Excel dashboard/PivotTable screenshots and add them to the Google Doc.
 
 ### Task 3 / Major Project — BI
 
-- [x] Create a Tableau Public dashboard and save its live URL.
-- [x] Save Tableau's dashboard preview image.
-- [ ] Open the live dashboard and validate unfiltered and filtered results.
-- [ ] Check the monthly axis; use continuous Month if a monthly trend is required.
-- [ ] Save/download a genuine `.twbx` if required by the mentor; do not rename another file type.
-- [ ] Capture any remaining filtered dashboard screenshots.
-- [ ] Add final evidence to the repository and Google Doc.
+- [ ] Reopen the final PBIX in Power BI Desktop and test final-layout filtering.
+- [ ] Capture a filtered screenshot of the final Power BI layout; the supplied filtered capture is from an earlier development layout.
+- [ ] Change trend axes to continuous Month where a monthly trend is required; some supplied Power BI captures show Year and the Tableau capture shows Year of Month Start.
+- [ ] Save/download a genuine `.twbx` only if required by the mentor.
+- [ ] Independent interactive testing is not claimed by the assistant.
 
 ### Final review and portal
 
-- [ ] Update pending-status notes only after the corresponding work is genuinely complete.
-- [ ] Review the Google Doc for formatting and insert all required genuine screenshots.
-- [ ] Commit and push every final file; do not upload a ZIP.
-- [ ] Test both review links again in an incognito window.
+- [ ] Test the GitHub and Google Doc review links again in an incognito window.
 - [ ] Confirm the current official P1 deadline and mentor instructions in the portal.
 - [ ] Submit only the two review links through the P1 portal.
 - [ ] Submit carefully because each submission/resubmission uses a chance.

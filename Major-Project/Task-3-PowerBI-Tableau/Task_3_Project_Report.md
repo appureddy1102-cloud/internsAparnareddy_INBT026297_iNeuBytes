@@ -77,25 +77,29 @@ If the average is calculated using long-table row count rather than distinct dat
 - Year/category filters allow users to investigate whether broad patterns hold in subsets.
 - Consistent measures allow SQL, Excel and BI outputs to be reconciled.
 
-## 7. Published Tableau dashboard and remaining steps
+## 7. Power BI and Tableau application evidence
 
-A Tableau Public dashboard has been created by the student:
+### Power BI
+
+A genuine student-created `Pharma_Sales_Dashboard.pbix` is included in this folder. Its ZIP integrity passed, and the package contains a data model, report definitions and four report pages. It was structurally checked but not reopened in this environment.
+
+Selected screenshots are under `Major-Project/Screenshots/Task-3-PowerBI/`:
+
+- `PowerBI_01_Dashboard_Summary.png` — final Summary page with KPI and category evidence.
+- `PowerBI_02_Sales_Analysis.png` — category, weekday and trend analysis.
+- `PowerBI_03_Filtered_Development_View.png` — earlier filtered development capture, not represented as the final layout.
+
+Final PBIX reopen/filter testing and a filtered capture of the final layout are recommended. Some trend captures display Year rather than continuous Month.
+
+### Tableau
+
+The student's Tableau Public dashboard is:
 
 https://public.tableau.com/app/profile/tallapureddy.reddy/viz/Pharma_Sales_Dashboard_/PharmaSalesDashboard?publish=yes
 
-Tableau's own preview image is saved at `Major-Project/Screenshots/Tableau_Pharma_Sales_Dashboard.png`. The public page and preview were accessible when checked. See `Tableau_Dashboard_Link.md` for the evidence note.
+Tableau's static preview and three Desktop/Public application captures are included under `Major-Project/Screenshots/`. The dashboard still displays Year of Month Start in the supplied capture; use continuous Month if a monthly trend is required. A local `.twbx` and independent interactive-filter validation are not claimed.
 
-A local `.pbix` or `.twbx` has not been generated in this environment. The hosted Tableau dashboard is genuine, but it must not be described as a packaged workbook.
-
-Before P1 submission:
-
-- [x] Create a Tableau Public dashboard and save its live URL.
-- [x] Save Tableau's dashboard preview image.
-- [ ] Open the live dashboard and validate unfiltered and filtered results.
-- [ ] Check the monthly axis; the preview currently displays Year of Month Start, so use continuous Month if a monthly trend is required.
-- [ ] Save/download a genuine `Pharma_Sales_Dashboard.twbx` if required by the mentor.
-- [ ] Capture any remaining filtered-view screenshots.
-- [ ] Add the final evidence to the combined Google Doc.
+See `Major-Project/Documentation/Application_Evidence_Register.md` for the complete evidence scope.
 
 ## 8. Learning
 

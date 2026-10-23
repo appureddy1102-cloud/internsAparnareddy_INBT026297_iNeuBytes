@@ -10,7 +10,7 @@
 
 **Tableau Public dashboard:** https://public.tableau.com/app/profile/tallapureddy.reddy/viz/Pharma_Sales_Dashboard_/PharmaSalesDashboard?publish=yes
 
-> **Completion status:** This repository contains real data, code, calculations, an Excel workbook, BI build assets and reports. A Tableau Public dashboard link and Tableau's own preview image have been added. MySQL execution screenshots, native Excel PivotTables if required, a local packaged `.twbx` if required, and any remaining application/filtered screenshots remain manual steps. Do not describe pending items as completed in the P1 portal.
+> **Completion status:** The repository now contains the final corrected self-contained SQL, a genuine Power BI PBIX, Tableau Public evidence, and student-supplied MySQL, Excel, Power BI and Tableau screenshots. PNG integrity and PBIX structure were checked. Final Excel recalculation/category-chart checks, native PivotTables if required, final-layout filtered captures and continuous-month/filter review remain documented in `Major-Project/Documentation/Application_Evidence_Register.md`. No `.twbx` or native PivotTable objects are claimed.
 
 ## 1. Project objective
 
@@ -91,10 +91,10 @@ January 2014 and October 2019 are partial months. They remain labelled and are e
 ### Task 1 — SQL
 
 1. Open `Task-1/pharma_sales_analysis.sql` in MySQL 8.0.
-2. Change the `LOAD DATA LOCAL INFILE` path to your local `Task-1/Dataset/salesdaily.csv` path.
-3. Run sections in order and inspect every quality-check result.
+2. Select an allowed existing schema. The final script is self-contained and does not require `LOAD DATA`, a CSV path, `CREATE DATABASE` or `USE`.
+3. Run the complete script once, then run analysis SELECT statements individually and inspect every quality-check result.
 4. Compare results with `Task-1/query_results/` and `Task-1/Business_Insights.md`.
-5. Capture real MySQL query/result screenshots before submission.
+5. Student-supplied MySQL execution/result screenshots are under `Major-Project/Screenshots/Task-1-SQL/`.
 
 ### Task 2 — Excel
 
@@ -106,19 +106,18 @@ January 2014 and October 2019 are partial months. They remain labelled and are e
 
 ### Task 3 and Major Project — BI
 
-1. Open the guides in `Major-Project/Task-3-PowerBI-Tableau/`.
-2. Import `pharma_sales_long.csv` into Power BI or Tableau.
-3. Apply the supplied data types, Date model, DAX measures or Tableau calculated fields.
-4. Build KPI cards, complete-month trend, category chart, weekday chart and filters.
-5. Validate the same headline totals, save a genuine `.pbix` or `.twbx`, reopen it and capture real screenshots.
+1. The genuine Power BI file is `Major-Project/Task-3-PowerBI-Tableau/Pharma_Sales_Dashboard.pbix`.
+2. The Tableau Public URL and evidence note are in `Major-Project/Task-3-PowerBI-Tableau/Tableau_Dashboard_Link.md`.
+3. Reopen the PBIX in Power BI Desktop and test the final report pages, filters and headline totals.
+4. Review the Tableau dashboard and use continuous Month rather than Year if a monthly trend is required.
+5. See `Major-Project/Screenshots/` and `Major-Project/Documentation/Application_Evidence_Register.md` for the supplied evidence and validation boundary.
 
 ## 8. Remaining manual steps before P1 submission
 
-- [ ] Run the SQL script in MySQL and capture application evidence.
-- [ ] Validate Excel formulas/charts and add native PivotTables if required.
-- [ ] Build and save the actual Power BI or Tableau dashboard file.
-- [ ] Add genuine application screenshots to this repository and the single Google Doc.
-- [ ] Replace/update any remaining pending-status text after the work is actually complete.
+- [ ] Recalculate the final Excel workbook, verify the category-comparison chart and add native PivotTables if required.
+- [ ] Reopen the final PBIX, test filters and capture a filtered screenshot of the final layout.
+- [ ] Review the Tableau/Power BI trend axes and use continuous Month where a monthly trend is required.
+- [ ] Save/download a `.twbx` only if required by the mentor.
 - [ ] Test the GitHub and Google Docs links in an incognito window.
 - [ ] Submit only the two review links through the official P1 portal.
 
